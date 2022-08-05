@@ -19,7 +19,6 @@ def process_data2(inputs):
                 print(my_num, end=' ')
         except:
             print("Не число", end=' ')
-            #break
         else:
             numbers3.append(my_num)
     print("")
@@ -39,20 +38,18 @@ def process_data3():
         f.close()
 
 def main():
-    
     process_data()
     print("")
-    
+
     numbers2 = ['2', '3', 'Hello', '7', '11', '16']
     process_data2(numbers2)
     print("")
     print("")
-    
-#    f = open("demo.txt", "r", encoding='utf-8')
+
     process_data3()
     print("")
     return 0
-    
+
 if __name__ == '__main__':
     main()
 
