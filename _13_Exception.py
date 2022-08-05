@@ -27,6 +27,17 @@ def process_data2(inputs):
     for my_numbers3 in numbers3:
         print(my_numbers3, end=' ')
 
+# Используется обработка попытки записи в файл
+# открытый на чтение
+def process_data3():
+    try:
+        f = open("demo.txt", "r", encoding='utf-8')
+        f.write("Привет")
+    except:
+        print("Ошибка при записи в файл")
+    finally:
+        f.close()
+
 def main():
     
     process_data()
@@ -36,6 +47,11 @@ def main():
     process_data2(numbers2)
     print("")
     print("")
+    
+#    f = open("demo.txt", "r", encoding='utf-8')
+    process_data3()
+    print("")
+    return 0
     
 if __name__ == '__main__':
     main()
